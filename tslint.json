@@ -4,6 +4,5 @@
   "rules": {
     "prettier": true,
     "only-arrow-functions": false,
-    
   }
 }
