@@ -3,7 +3,7 @@ import styled from 'react-emotion'
 import { transparentize } from 'polished'
 import { Link } from 'gatsby'
 
-import { heights, dimensions, colors } from '../styles/variables'
+import { breakpoints, heights, dimensions, colors } from '../styles/variables'
 import Container from './Container'
 
 const StyledHeader = styled.header`
@@ -25,10 +25,19 @@ const HomepageLink = styled(Link)`
   color: ${colors.black};
   font-size: 1.5rem;
   font-weight: 600;
+  white-space: nowrap;
 
   &:hover,
   &:focus {
     text-decoration: none;
+  }
+
+  @media (max-width: ${breakpoints.md}px) {
+    font-size: 1.2rem;
+  }
+
+  @media (max-width: ${breakpoints.sm}px) {
+    font-size: 1rem;
   }
 `
 
